@@ -1,0 +1,115 @@
+/* Settings */
+body
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: 'Roboto', sans-serif
+
+ul
+    list-style: none
+    margin: 0
+    padding: 0
+
+h1,h2,h3,h4,h5,h6
+    margin: 0
+    padding: 0
+
+a
+    text-decoration: none
+    color: #2F3035
+
+.container
+    max-width: 1200px
+    padding: 0 15px
+    margin: 0 auto
+
+/* Variables */
+$accent-color: #1C62CD
+$text-color: #2F3035
+$base-color: #F0F0F4
+$grey-color: #C4C4C4
+
+/* Header */
+.header
+    &__top
+        &-inner
+            display: flex
+            justify-content: space-between
+            align-items: center
+            min-height: 122px
+            font-weight: bold
+            font-size: 20px
+            line-height: 24px
+            color: #000
+    &__box
+        display: flex
+        align-items: center
+    &__adress
+        width: 265px
+        margin-right: 86px
+        padding-left: 30px
+        position: relative
+        &::before
+            content: ""
+            position: absolute
+            background-image: url('../img/adress.svg')
+            background-repeat: no-repeat
+            width: 30px
+            height: 30px
+            left: 0
+            top: -10px
+
+.user__lists
+    margin-right: 10px
+    display: flex
+    align-items: center
+    &-item
+        padding-right: 10px
+
+.menu__item
+    display: inline-block
+.menu__item + .menu__item
+    padding-left: 50px
+
+.cart
+    position: relative
+
+.cart__num
+    position: absolute
+    font-weight: 500
+    font-size: 10px
+    width: 20px
+    height: 20px
+    background-color: $accent-color
+    color: #fff
+    border-radius: 50%
+    text-align: center
+    line-height: 20px
+    top: 2px
+    right: -10px
+
+.menu__categories
+    display: flex
+    justify-content: space-around
+    align-items: center
+    padding-top: 15px
+    background-color: $base-color
+    color: $text-color
+    font-size: 20px
+    line-height: 24px
+    &-link
+        display: block
+        position: relative
+        padding-bottom: 15px
+        transition: all .5s
+        &::before
+            content: ""
+            position: absolute
+            width: 0
+            height: 3px
+            background-color: $accent-color
+            bottom: 0
+            transition: all .5s
+        &:hover
+            &::before
+                width: 100%
